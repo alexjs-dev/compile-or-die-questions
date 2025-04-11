@@ -1,4 +1,4 @@
-var elixir_challenges = [
+var easy = [
   {
     code: [
       "defmodule Human do",
@@ -145,5 +145,62 @@ var elixir_challenges = [
     challenge_type: ChallengeType.YES_NO,
     is_solution_valid: false,
     timer: 30,
+  },
+  {
+    code: [
+      "defmodule Human do",
+      "  def Serve do",
+      '    IO.puts("I must obey")',
+      "  end",
+      "end",
+    ],
+    timer: 60,
+    challenge_type: ChallengeType.YES_NO,
+    error_line: null,
+    is_solution_valid: true,
+    success_response: {
+      message: "FALLBACK",
+    },
+    failure_response: {
+      message: "FALLBACK",
+    },
+  },
+  {
+    code: [
+      "defmodule Human do",
+      "  def Serve do",
+      '    IO.puts = "I must obey"',
+      "  end",
+      "end",
+    ],
+    error: "Cannot invoke remote function IO.puts/0 inside a match",
+    challenge_type: ChallengeType.YES_NO,
+    error_line: null,
+    is_solution_valid: false,
+    success_response: {
+      message: "FALLBACK",
+    },
+    failure_response: {
+      message: "FALLBACK",
+    },
+  },
+  {
+    code: [
+      "defmodule Human do",
+      "  def Serve do",
+      '    IO.puts = "I must obey"',
+      "  end",
+      "end",
+    ],
+    error: "Cannot invoke remote function IO.puts/0 inside a match",
+    challenge_type: ChallengeType.PICK_LINE,
+    error_line: 2,
+    is_solution_valid: false,
+    success_response: {
+      message: "FALLBACK",
+    },
+    failure_response: {
+      message: "FALLBACK",
+    },
   },
 ];

@@ -6,7 +6,7 @@ var mid = [
                 "square_all([1, 2, :three])",
             "end"
         ],
-        error: "** (ArithmeticError) bad argument in arithmetic expression",
+        error: "** (ArithmeticError) you cannot multiply :three with :three",
         challenge_type: ChallengeType.PICK_LINE,
         error_line: 3,
         is_solution_valid: false,
